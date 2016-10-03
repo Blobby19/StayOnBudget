@@ -1,0 +1,22 @@
+{
+  "name": "stayonbudget",
+  "version": "0.0.1",
+  "description": "Stay On Budget is an app to manage all your expenses and income",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blobby19/StayOnBudget.git"
+  },
+  "keywords": [
+    "income;expenses;stayonbudget;manage;budget;bills"
+  ],
+  "author": "Luc Viala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Blobby19/StayOnBudget/issues"
+  },
+  "homepage": "https://github.com/Blobby19/StayOnBudget#readme"
+}
