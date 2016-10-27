@@ -1,18 +1,22 @@
 module.exports = function(router, passport){
+	router.post('/authenticate', 
+		passport.authenticate('localapikey', {failureRedirect : '/api/unauthorized'}), 
+		function(req, res){
+			res.json({message: "Authenticated", user: user});
+		});
 
-	router.post('/login', passport.authenticate('local-login'), function(req, res){
-		if(req.isAuthenticated()){
-			res.send(200);
-		}
-		res.send(401);
-	});
-
-	router.post('/register', passport.authenticate('local-signup'), function(req, res){
-
-	});
-
-	router.post('/logout', function(req, res){
+	router.get('/logout', function(req, res){
 		req.logout();
 		res.redirect('/');
 	});
+
+	router.get('/unauthorized', function(req, res){
+		res.send(401);
+	});
+
+	var isAuthenticated = function (req, res, next) {
+  		if (req.isAuthenticated())
+			return next();
+		res.redirect('/');
+	}
 };

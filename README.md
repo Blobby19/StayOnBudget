@@ -1,2 +1,2 @@
 # StayOnBudget
-StayOnBudget is an app to manage all your expenses and income
+StayOnBudget is an app to manage all your expenses and incomes
